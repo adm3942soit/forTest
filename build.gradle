@@ -1,0 +1,37 @@
+group 'com.test'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'junit', name: 'junit', version: '4.11'
+    compile group: 'javax.ejb', name: 'javax.ejb-api', version: '3.2'
+    compile group: 'javax.xml', name: 'jaxb-api', version: '2.1'
+}
+task fatJar(type: Jar) {
+
+    manifest {
+        attributes 'Implementation-Title': 'forTest',
+                'Implementation-Version': version,
+                'Main-Class': 'ConverterFromXMLToObject'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+allprojects{
+    [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+    sourceSets {
+        main {
+            output.resourcesDir = output.classesDir
+        }
+
+    }
+}
