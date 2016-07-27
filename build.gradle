@@ -2,6 +2,7 @@ group 'com.test'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin:'application'
 
 sourceCompatibility = 1.8
 
@@ -12,8 +13,10 @@ def libs =[
         credentials: files('lib/credentials-all-1.0.jar'),
         jackson       : 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.4.2',
         javaxws       : files('lib/javax.ws.rs-api-2.0.1.jar'),
-        lombok        : 'org.projectlombok:lombok:1.16.10',
-        persistence : files('lib/javax.persistence-2.1.0.jar')
+        lombok        : files('lib/lombok.jar'),
+        persistence : files('lib/javax.persistence-2.1.0.jar'),
+        embedGlassFishAll: files("lib/glassfish-embedded-all-4.1.1.jar")
+
 ]
 dependencies {
     compile group: 'junit', name: 'junit', version: '4.11'
@@ -24,6 +27,7 @@ dependencies {
     compile libs.credentials
     compile libs.lombok
     compile libs.jackson
+    testCompile libs.embedGlassFishAll
 
 }
 task fatJar(type: Jar) {
@@ -43,7 +47,27 @@ allprojects{
     sourceSets {
         main {
             output.resourcesDir = output.classesDir
+
         }
 
     }
+
 }
+
+
+/*
+compileJava {
+    options.compilerArgs<< '-Xms1024M -Xmx2048M -XX:-UseGCOverheadLimit'
+*/
+/*
+    << '-Xms1024M -Xmx2048M -XX:-UseGCOverheadLimit'
+*//*
+
+    options.fork = true
+    options.forkOptions.executable = 'javac'
+}
+*/
+run{
+    systemProperties = ['java.util.logging.config.file' : 'logging.properties']
+}
+mainClassName = 'com.test.xml.ConverterFromXMLToOBJECT'
