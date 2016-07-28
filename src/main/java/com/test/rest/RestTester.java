@@ -2,7 +2,6 @@ package com.test.rest;
 
 import com.credentials.Credentials;
 import com.test.json.JacksonFeature;
-import org.junit.BeforeClass;
 
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.Context;
