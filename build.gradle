@@ -13,7 +13,6 @@ def libs =[
         credentials: files('lib/credentials-all-1.0.jar'),
         jackson       : 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.4.2',
         javaxws       : files('lib/javax.ws.rs-api-2.0.1.jar'),
-        lombok        : files('lib/lombok.jar'),
         persistence : files('lib/javax.persistence-2.1.0.jar'),
         embedGlassFishAll: files("lib/glassfish-embedded-all-4.1.1.jar")
 
@@ -25,7 +24,6 @@ dependencies {
     compile libs.persistence
     compile libs.javaxws
     compile libs.credentials
-    compile libs.lombok
     compile libs.jackson
     testCompile libs.embedGlassFishAll
 

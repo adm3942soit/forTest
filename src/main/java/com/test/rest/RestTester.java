@@ -140,6 +140,9 @@ public class RestTester {
 
         } catch (Exception e) {
             System.out.println("\n\tGot exception: " + e.getMessage());
+            if(e.getMessage()==null){
+                System.out.println("Module ecom-rest undeployed");
+            }
             System.out.println(e.getCause().toString());
             if (e.getMessage() != null && e.getMessage().contains("Connection refused")) {
                 System.out.println("Glassfish server not started");
