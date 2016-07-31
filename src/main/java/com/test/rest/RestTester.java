@@ -1,7 +1,9 @@
 package com.test.rest;
 
 import com.credentials.Credentials;
-import com.test.json.JacksonFeature;
+//import com.test.json.JacksonFeature;
+import org.glassfish.jersey.jackson.JacksonFeature;
+
 
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.Context;
@@ -25,7 +27,8 @@ public class RestTester {
     public static String resources;
     public static String applicationName;
     public static String nameConfig = "ecom-dev.properties";
-    public static void getCurrentDirs(){
+
+    public static void getCurrentDirs() {
         try {
             current = new File(".").getCanonicalPath();
             current = current.replaceAll("\\\\", "/");
@@ -35,6 +38,7 @@ public class RestTester {
         }
 
     }
+
     public static Context ctx;
 
     private static EJBContainer container;
@@ -106,29 +110,32 @@ public class RestTester {
 */
 
     }
+
     private static URI getBaseURI(String url) {
         return UriBuilder.fromUri(url).build();
     }
+
     public static void setSessionUserNamePassword(String urlForLogin) {
         if (!GLASSFISH_ON) return;
         try {
-            autorization(urlForLogin,Credentials.getUserName(Credentials.MERCHANT), Credentials.MERCHANT);
+            autorization(urlForLogin, Credentials.getUserName(Credentials.MERCHANT), Credentials.MERCHANT);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
 
     }
+
     public static void setSessionUserNamePassword(String urlForLogin, String userName, String password) {
         if (!GLASSFISH_ON) return;
         try {
-            autorization(urlForLogin,userName, password);
+            autorization(urlForLogin, userName, password);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
 
     }
 
-    private static void autorization(String urlForLogin,String userName, String key) {
+    private static void autorization(String urlForLogin, String userName, String key) {
         try {
             WebTarget target = RestTester.getClient().target(getBaseURI(urlForLogin));
             Response clientResponse = target
@@ -139,7 +146,7 @@ public class RestTester {
 
         } catch (Exception e) {
             System.out.println("\n\tGot exception: " + e.getMessage());
-            if(e.getMessage()==null){
+            if (e.getMessage() == null) {
                 System.out.println("Module ecom-rest undeployed");
             }
             System.out.println(e.getCause().toString());
@@ -161,13 +168,13 @@ public class RestTester {
     ) {
         if (!GLASSFISH_ON) return;
         try {
-           // setArguments(urlForResource,urlForLogin,"get",null,"id","21213832");
+            // setArguments(urlForResource,urlForLogin,"get",null,"id","21213832");
             WebTarget target = RestTester.getClient().target(getBaseURI(urlForResource));
-            if(pathInResource!=null){
-                if(parameterToResource==null)
-                    target=target.path(pathInResource);
+            if (pathInResource != null) {
+                if (parameterToResource == null)
+                    target = target.path(pathInResource);
                 else
-                    target=target.path("{"+pathInResource+"}").resolveTemplate(pathInResource,parameterToResource);
+                    target = target.path("{" + pathInResource + "}").resolveTemplate(pathInResource, parameterToResource);
             }
             System.out.println("Received cookie: " + cookieMap);
             Invocation.Builder invocationBuilder = target
@@ -204,7 +211,7 @@ public class RestTester {
 
         }
 
-        return ;
+        return;
     }
 
     public static Boolean getGlassfishOn() {
@@ -253,5 +260,9 @@ public class RestTester {
 
     public static void setNameConfig(String nameConfig) {
         RestTester.nameConfig = nameConfig;
+    }
+
+    public static void main(String[] args) {
+
     }
 }

@@ -14,18 +14,22 @@ def libs =[
         jackson       : 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.4.2',
         javaxws       : files('lib/javax.ws.rs-api-2.0.1.jar'),
         persistence : files('lib/javax.persistence-2.1.0.jar'),
-        embedGlassFishAll: files("lib/glassfish-embedded-all-4.1.1.jar")
+        embedGlassFishAll: files("lib/glassfish-embedded-all-4.1.1.jar"),
+        jerseyMedia: files("lib/jersey-media-json-jackson-2.19.jar")
 
 ]
 dependencies {
     compile group: 'junit', name: 'junit', version: '4.11'
     compile group: 'javax.ejb', name: 'javax.ejb-api', version: '3.2'
     //compile group: 'javax.xml', name: 'jaxb-api', version: '2.1'
+    compile libs.jerseyMedia
     compile libs.persistence
     compile libs.javaxws
     compile libs.credentials
     compile libs.jackson
     testCompile libs.embedGlassFishAll
+    testCompile group: 'org.glassfish.main.extras', name: 'glassfish-embedded-static-shell', version: '4.1.1'
+
 
 }
 task fatJar(type: Jar) {
@@ -33,10 +37,12 @@ task fatJar(type: Jar) {
     manifest {
         attributes 'Implementation-Title': 'forTest',
                 'Implementation-Version': version,
-                'Main-Class': 'ConverterFromXMLToObject'
+                'Main-Class': 'RestTester'
     }
     baseName = project.name + '-all'
-    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+        configurations.testCompile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
     with jar
 }
 allprojects{
@@ -68,4 +74,4 @@ compileJava {
 run{
     systemProperties = ['java.util.logging.config.file' : 'logging.properties']
 }
-mainClassName = 'com.test.xml.ConverterFromXMLToOBJECT'
+mainClassName = 'com.test.rest.RestTester'

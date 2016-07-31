@@ -1,0 +1,25 @@
+package com.test.rest;
+
+import com.test.orderTests.Order;
+import com.test.orderTests.OrderRunner;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+/**
+ * Created by oksdud on 28.07.2016.
+ */
+@RunWith(OrderRunner.class)
+@Slf4j
+
+public class PaymentResourcesTester {
+    @BeforeClass
+    public static void prepareData() {
+        RestTester.setApplicationName("ecom-rest");
+        RestTester.setNameConfig("ecom-dev.properties");
+        RestTester.prepareData();
+    }
+
+
+}

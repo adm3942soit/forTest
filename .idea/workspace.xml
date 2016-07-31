@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caca9873-4e86-4c68-ad06-570f2905ff04" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/com/test/xml/ConverterFromXMLToObject.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/test/xml/ConverterFromXMLToObject.java" afterPath="$PROJECT_DIR$/src/main/java/com/test/xml/ConverterFromXMLToObjectjava" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/test/rest/PaymentResourcesTesterjava" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/test/xml/ConverterFromXMLToObjectjava" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/forTest-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/build/libs/forTest-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/credentials-all-1.0.jar" afterPath="$PROJECT_DIR$/lib/credentials-all-1.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/forTest_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/forTest_main.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/forTest_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/forTest_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java" afterPath="$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java" />
@@ -121,8 +124,8 @@
       <file leaf-file-name="RestResourcesTester.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/test/rest/RestResourcesTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2060">
-              <caret line="143" column="81" selection-start-line="143" selection-start-column="45" selection-end-line="143" selection-end-column="81" />
+            <state relative-caret-position="200">
+              <caret line="20" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="false" />
                 <element signature="e#745#746#0" expanded="false" />
@@ -167,29 +170,19 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+            <state relative-caret-position="19">
+              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConverterFromXMLToObjectjava" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/xml/ConverterFromXMLToObjectjava">
+      <file leaf-file-name="PaymentResourcesTesterjava" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/test/rest/PaymentResourcesTesterjava">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-              <folding>
-                <marker date="1468233146466" expanded="false" signature="31:152" ph="..." />
-                <marker date="1468233146466" expanded="true" signature="154:204" ph="/**...*/" />
-                <marker date="1468233146466" expanded="true" signature="332:599" ph="{...}" />
-                <marker date="1468233146466" expanded="true" signature="720:728" ph="{...}" />
-                <marker date="1468233146466" expanded="true" signature="798:1210" ph="{...}" />
-                <marker date="1468233146466" expanded="false" signature="1249:1255" ph=" { " />
-                <marker date="1468233146466" expanded="false" signature="1289:1291" ph=" }" />
-                <marker date="1468233146466" expanded="false" signature="1326:1337" ph=" { " />
-                <marker date="1468233146466" expanded="false" signature="1356:1362" ph=" }" />
-              </folding>
+            <state relative-caret-position="280">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -197,11 +190,19 @@
       <file leaf-file-name="RestTester.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="139">
+              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JacksonFeature.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/json/JacksonFeature.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="610">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -425,7 +426,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="2937920280959" />
+        <entry key="$PROJECT_DIR$" value="2938202519661" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -556,6 +557,7 @@
         <option value="$PROJECT_DIR$/src/test/java/com/test/rest/orderTests/OrderRunner.java" />
         <option value="$PROJECT_DIR$/src/test/resources/credentials.json" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/rest/RestResourcesTester.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/rest/PaymentResourcesTester.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
       </list>
@@ -582,8 +584,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="y" value="-4" />
+    <option name="x" value="18" />
     <option name="width" value="1374" />
     <option name="height" value="776" />
   </component>
@@ -612,6 +613,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -691,8 +693,30 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="forTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -722,63 +746,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="xml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="json" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -832,7 +800,6 @@
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -847,18 +814,18 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\MyLibs\forTest\lib" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MyLibs\forTest\lib" />
       <recent name="C:\MyLibs\forTest\build\libs" />
       <recent name="C:\MyLibs\forTest\src\test\resources" />
       <recent name="C:\MyRepository\medoroPaymentStatus\lib" />
       <recent name="C:\MyRepository\medoro\ecom-lib\src\main\java\com\lpb\ecom\persistence\entity" />
-      <recent name="C:\MyRepository\medoro\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MyLibs\forTest\lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RestResourcesTester">
+  <component name="RunManager" selected="Gradle.forTest [fatJar]">
     <configuration default="false" name="medoroPaymentStatus [deploy-local]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -1460,7 +1427,9 @@
       <workItem from="1469541307763" duration="1467000" />
       <workItem from="1469609517105" duration="7835000" />
       <workItem from="1469628850526" duration="10913000" />
-      <workItem from="1469693418164" duration="616000" />
+      <workItem from="1469693418164" duration="6098000" />
+      <workItem from="1469799218924" duration="869000" />
+      <workItem from="1469945979582" duration="4300000" />
     </task>
     <task id="LOCAL-00001" summary="added creating of indexes for elastic for PROCESSED payments during closing of batch">
       <created>1468855748892</created>
@@ -1518,16 +1487,17 @@
       <option name="project" value="LOCAL" />
       <updated>1469688324117</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="implemented test for RestTester">
+      <created>1469694048797</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1469694048797</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RestResourcesTester - 2016.07.28 at 09h 01m 29s.xml">
-      <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="RestResourcesTester - 2016.07.28 at 09h 03m 23s.xml">
-      <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="RestResourcesTester - 2016.07.28 at 09h 06m 44s.xml">
       <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -1552,9 +1522,15 @@
     <history-entry file="RestResourcesTester - 2016.07.28 at 11h 20m 11s.xml">
       <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="RestResourcesTester - 2016.07.31 at 16h 47m 50s.xml">
+      <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="RestResourcesTester - 2016.07.31 at 17h 44m 38s.xml">
+      <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178543000" />
+    <option name="totallyTimeSpent" value="189194000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1566,7 +1542,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="776" extended-state="6" />
+    <frame x="18" y="0" width="1374" height="776" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1578,14 +1554,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.4939577" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.391172" sideWeight="0.46978852" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3196347" sideWeight="0.46978852" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49697885" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25151056" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23744293" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12462236" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12386707" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1599,6 +1574,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48964497" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41095892" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1916,7 +1892,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ecom-core/src/main/java/com/lpb/ecom/elasticsearch/TransportClientStub.java" />
     <entry file="file://$PROJECT_DIR$/ecom-core/src/main/java/com/lpb/ecom/elasticsearch/service/client/AdminClient.java" />
     <entry file="file://$PROJECT_DIR$/ecom-lib/src/main/java/com/lpb/ecom/persistence/entity/readonly/ElasticSearchPayment.java" />
     <entry file="file://$PROJECT_DIR$/ecom-core/src/main/java/com/lpb/ecom/elasticsearch/service/ElasticSearchUpdaterService.java" />
@@ -2025,13 +2000,6 @@
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/glassfish-embedded-all-4.0.1-b01.jar!/javax/ws/rs/core/Feature.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/json/JacksonFeature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/glassfish-embedded-all-4.0.1-b01.jar!/org/glassfish/jersey/client/JerseyClientBuilder.class" />
     <entry file="jar://$PROJECT_DIR$/lib/glassfish-embedded-all-4.0.1-b01.jar!/org/glassfish/jersey/model/internal/CommonConfig.class" />
     <entry file="jar://$PROJECT_DIR$/lib/glassfish-embedded-all-4.1.1.jar!/org/glassfish/weld/WeldDeployer.class">
@@ -2041,10 +2009,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/xml/ConverterFromXMLToObjectjava" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/test/rest/RestResourcesTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2060">
-          <caret line="143" column="81" selection-start-line="143" selection-start-column="45" selection-end-line="143" selection-end-column="81" />
+        <state relative-caret-position="200">
+          <caret line="20" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
             <element signature="e#745#746#0" expanded="false" />
@@ -2085,38 +2054,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/xml/ConverterFromXMLToObjectjava">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/rest/PaymentResourcesTesterjava">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding>
-            <marker date="1468233146466" expanded="false" signature="31:152" ph="..." />
-            <marker date="1468233146466" expanded="true" signature="154:204" ph="/**...*/" />
-            <marker date="1468233146466" expanded="true" signature="332:599" ph="{...}" />
-            <marker date="1468233146466" expanded="true" signature="720:728" ph="{...}" />
-            <marker date="1468233146466" expanded="true" signature="798:1210" ph="{...}" />
-            <marker date="1468233146466" expanded="false" signature="1249:1255" ph=" { " />
-            <marker date="1468233146466" expanded="false" signature="1289:1291" ph=" }" />
-            <marker date="1468233146466" expanded="false" signature="1326:1337" ph=" { " />
-            <marker date="1468233146466" expanded="false" signature="1356:1362" ph=" }" />
-          </folding>
+        <state relative-caret-position="280">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/json/JacksonFeature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="139">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        <state relative-caret-position="19">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
           <folding />
         </state>
       </provider>
