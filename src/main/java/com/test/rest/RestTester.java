@@ -1,10 +1,7 @@
 package com.test.rest;
 
 import com.credentials.Credentials;
-//import com.test.json.JacksonFeature;
 import org.glassfish.jersey.jackson.JacksonFeature;
-//import org.apache.openejb.config.DeploymentsResolver;
-
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.Context;
 import javax.ws.rs.client.*;
