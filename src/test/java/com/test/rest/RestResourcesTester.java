@@ -11,6 +11,7 @@ import org.junit.runner.RunWith;
 import javax.naming.Context;
 import javax.ws.rs.client.*;
 import javax.ws.rs.core.UriBuilder;
+import java.io.File;
 import java.net.URI;
 
 /**
@@ -158,7 +159,8 @@ public class RestResourcesTester {
     @BeforeClass
     public static void prepareData() {
         setResources("ecom-rest","ecom-dev.properties");
-        RestTester.prepareData();
+        RestTester.setWarAbsolutePath(null);
+        RestTester.startContainer();
 /*
         try {
 

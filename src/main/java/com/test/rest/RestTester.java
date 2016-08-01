@@ -3,7 +3,7 @@ package com.test.rest;
 import com.credentials.Credentials;
 //import com.test.json.JacksonFeature;
 import org.glassfish.jersey.jackson.JacksonFeature;
-
+//import org.apache.openejb.config.DeploymentsResolver;
 
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.Context;
@@ -26,6 +26,7 @@ public class RestTester {
     public static String current;
     public static String resources;
     public static String applicationName;
+    public static String warAbsolutePath;
     public static String nameConfig = "ecom-dev.properties";
 
     public static void getCurrentDirs() {
@@ -49,8 +50,14 @@ public class RestTester {
         return ctx;
     }
 
-    public static void prepareData() {
+    public static void startContainer() {
+        System.setProperty("openejb.validation.output.level", "VERBOSE");
+        System.setProperty("openejb.jpa.auto-scan", "true");
+        System.setProperty("openejb.embedded.initialcontext.close", "DESTROY");
+
         Map<String, Object> properties = new HashMap<String, Object>();
+        properties.put(Context.INITIAL_CONTEXT_FACTORY,
+                "org.apache.openejb.client.LocalInitialContextFactory");
 
         String pathToGlassfishRoot = System.getenv("GLASSFISH_HOME");
 
@@ -80,6 +87,14 @@ public class RestTester {
 
         properties.put(EJBContainer.APP_NAME, applicationName);
 
+        if(warAbsolutePath!=null && !warAbsolutePath.isEmpty()) {
+            final File file = new File(warAbsolutePath);
+            if (!file.mkdirs() && !file.exists()) {
+                throw new RuntimeException("can't create " + file.getAbsolutePath());
+            }
+           // properties.put(DeploymentsResolver.CLASSPATH_INCLUDE, pathToDomain + File.separator +warAbsolutePath);
+            properties.put(EJBContainer.MODULES, warAbsolutePath);//war.getAbsolutePath()
+        }
         String fileName = "";
 
         fileName = System.getenv("lpb.ecom.config");
@@ -260,6 +275,14 @@ public class RestTester {
 
     public static void setNameConfig(String nameConfig) {
         RestTester.nameConfig = nameConfig;
+    }
+
+    public static String getWarAbsolutePath() {
+        return warAbsolutePath;
+    }
+
+    public static void setWarAbsolutePath(String warAbsolutePath) {
+        RestTester.warAbsolutePath = warAbsolutePath;
     }
 
     public static void main(String[] args) {

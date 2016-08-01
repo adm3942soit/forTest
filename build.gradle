@@ -15,9 +15,12 @@ def libs =[
         javaxws       : files('lib/javax.ws.rs-api-2.0.1.jar'),
         persistence : files('lib/javax.persistence-2.1.0.jar'),
         embedGlassFishAll: files("lib/glassfish-embedded-all-4.1.1.jar"),
-        jerseyMedia: files("lib/jersey-media-json-jackson-2.19.jar")
-
+        jerseyMedia: files("lib/jersey-media-json-jackson-2.19.jar"),
+        openEjb:files("lib/openejb-core-4.7.2.jar")
 ]
+sourceSets.all {
+    output.resourcesDir = output.classesDir
+}
 dependencies {
     compile group: 'junit', name: 'junit', version: '4.11'
     compile group: 'javax.ejb', name: 'javax.ejb-api', version: '3.2'
@@ -28,8 +31,8 @@ dependencies {
     compile libs.credentials
     compile libs.jackson
     testCompile libs.embedGlassFishAll
-    testCompile group: 'org.glassfish.main.extras', name: 'glassfish-embedded-static-shell', version: '4.1.1'
-
+    //testCompile group: 'org.glassfish.main.extras', name: 'glassfish-embedded-static-shell', version: '4.1.1'
+    //compile libs.openEjb
 
 }
 task fatJar(type: Jar) {
