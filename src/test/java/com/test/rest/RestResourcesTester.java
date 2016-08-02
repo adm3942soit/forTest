@@ -27,7 +27,7 @@ public class RestResourcesTester {
     private static String nameRequest;
     private static String pathInResource;
     private static String parameterToResource;
-
+    private static Client client;
     public static String getNameXmlFile() {
         return nameXmlFile;
     }
@@ -189,7 +189,7 @@ public class RestResourcesTester {
             String userName=Credentials.getUserName(Credentials.MERCHANT);
             String password=Credentials.getUserPassword(Credentials.MERCHANT);
             RestTester.checkResource(urlSessionResource,"post",null,null,
-                    "{\"name\":\"" +userName  + "\" ,\"password\":\"" + password + "\"}");
+                    "{\"name\":\"" +userName  + "\" ,\"password\":\"" + password + "\"}", String.class);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -202,7 +202,7 @@ public class RestResourcesTester {
         if (!RestTester.GLASSFISH_ON) return;
         try {
             setArguments(urlPaymentResource, urlSessionResource,"get",null,"id","21213832");
-            RestTester.checkResource(urlForResource,"get","id","21213832",null);
+            RestTester.checkResource(urlForResource,"get","id","21213832",null, String.class);
         } catch (Exception e) {
             System.out.println("\n\tGot exception: " + e.getMessage());
             if(e.getMessage()==null){

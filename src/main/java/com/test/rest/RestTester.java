@@ -2,7 +2,8 @@ package com.test.rest;
 
 import com.credentials.Credentials;
 import com.test.forTransaction.Caller;
-import org.glassfish.jersey.jackson.JacksonFeature;
+import com.test.json.JacksonFeature;
+//import org.glassfish.jersey.jackson.JacksonFeature;
 
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.Context;
@@ -178,18 +179,17 @@ public class RestTester {
         }
 
     }
-
-    public static void checkResource(
+    public static boolean checkResource(
             String urlForResource,
             String nameRequest,
             String pathInResource,
             String parameterToResource,
-            String jsonStrEntity
+            String jsonStrEntity,
+            Class clazz
     ) {
-        if (!GLASSFISH_ON) return;
+        if (!GLASSFISH_ON) return false;
         try {
-            // setArguments(urlForResource,urlForLogin,"get",null,"id","21213832");
-            WebTarget target = RestTester.getClient().target(getBaseURI(urlForResource));
+            WebTarget target = client.target(getBaseURI(urlForResource));
             if (pathInResource != null) {
                 if (parameterToResource == null)
                     target = target.path(pathInResource);
@@ -197,14 +197,13 @@ public class RestTester {
                     target = target.path("{" + pathInResource + "}")
                             .resolveTemplate(pathInResource, parameterToResource);
             }
-            System.out.println("Received cookie: " + cookieMap);
             Invocation.Builder invocationBuilder;
             if (cookieMap==null || cookieMap.isEmpty()) {
-                invocationBuilder = target
+                invocationBuilder = target.register(clazz)
                         .request(MediaType.APPLICATION_JSON);
 
             } else {
-                invocationBuilder = target
+                invocationBuilder = target.register(clazz)
                         .request(MediaType.APPLICATION_JSON)
                         .cookie("JSESSIONID", cookieMap.get("JSESSIONID").getValue());
             }
@@ -237,10 +236,11 @@ public class RestTester {
                 System.out.println("Glassfish server not started");
                 RestTester.GLASSFISH_ON = false;
             }
+            return false;
 
         }
 
-        return;
+        return true;
     }
 
     public static Boolean getGlassfishOn() {
