@@ -1,6 +1,7 @@
 package com.test.rest;
 
 import com.credentials.Credentials;
+import com.test.forTransaction.Caller;
 import org.glassfish.jersey.jackson.JacksonFeature;
 
 import javax.ejb.embeddable.EJBContainer;
@@ -41,6 +42,7 @@ public class RestTester {
     public static Context ctx;
 
     private static EJBContainer container;
+    public static Caller transactionalCaller;
     public static Map<String, NewCookie> cookieMap;
 
     public static Map<String, NewCookie> getCookieMap() {
@@ -115,14 +117,16 @@ public class RestTester {
         container = EJBContainer.createEJBContainer(properties);//
         ctx = container.getContext();
 /*
+
         try {
 
             transactionalCaller = (Caller)
-                    ctx.lookup("java:global/ecom-rest/test/TransactionBean");
+                    ctx.lookup("java:global/forTest/main/TransactionBean");
 
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+
 */
 
     }
@@ -180,7 +184,7 @@ public class RestTester {
             String nameRequest,
             String pathInResource,
             String parameterToResource,
-            Entity entity
+            String jsonStrEntity
     ) {
         if (!GLASSFISH_ON) return;
         try {
@@ -212,11 +216,12 @@ public class RestTester {
                     break;
                 case "PUT":
                 case "put":
-                    clientResponse = invocationBuilder.put(entity);
+                    clientResponse = invocationBuilder.put(Entity.json(jsonStrEntity));
                     break;
                 case "POST":
                 case "post":
-                    clientResponse = invocationBuilder.post(Entity.entity(entity, MediaType.APPLICATION_JSON), Response.class);
+                    clientResponse = invocationBuilder.post(Entity.json(jsonStrEntity), Response.class);
+                    cookieMap = clientResponse.getCookies();
                     break;
                 default:
                     nameRequest = "get";

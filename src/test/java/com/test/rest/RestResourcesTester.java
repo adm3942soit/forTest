@@ -184,8 +184,12 @@ public class RestResourcesTester {
     public void setSessionUserNamePassword() {
         if (!RestTester.GLASSFISH_ON) return;
         try {
-            setArguments(urlPaymentResource, urlSessionResource,"get",null,"id","21213832");
-            RestTester.setSessionUserNamePassword(urlForLogin, Credentials.getUserName(Credentials.MERCHANT), Credentials.MERCHANT);
+            //setArguments(urlPaymentResource, urlSessionResource,"get",null,"id","21213832");
+            //RestTester.setSessionUserNamePassword(urlForLogin, Credentials.getUserName(Credentials.MERCHANT), Credentials.MERCHANT);
+            String userName=Credentials.getUserName(Credentials.MERCHANT);
+            String password=Credentials.getUserPassword(Credentials.MERCHANT);
+            RestTester.checkResource(urlSessionResource,"post",null,null,
+                    "{\"name\":\"" +userName  + "\" ,\"password\":\"" + password + "\"}");
         } catch (Exception ex) {
             ex.printStackTrace();
         }
