@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caca9873-4e86-4c68-ad06-570f2905ff04" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/forTest-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/build/libs/forTest-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java" afterPath="$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/test/forTransaction/TransactionBean.java" afterPath="$PROJECT_DIR$/src/main/java/com/test/forTransaction/TransactionBean.java" />
     </list>
     <ignored path="medoro.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -171,7 +170,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestTester.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RestTester.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -183,6 +182,16 @@
                 <element signature="e#4439#4440#0" expanded="true" />
                 <element signature="e#4493#4494#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionBean.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/forTransaction/TransactionBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -542,6 +551,7 @@
         <option value="$PROJECT_DIR$/src/test/java/com/test/rest/RestResourcesTester.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/forTransaction/TransactionBean.java" />
       </list>
     </option>
   </component>
@@ -1465,7 +1475,7 @@
       <workItem from="1469693418164" duration="6098000" />
       <workItem from="1469799218924" duration="869000" />
       <workItem from="1469945979582" duration="12847000" />
-      <workItem from="1470058481644" duration="5632000" />
+      <workItem from="1470058481644" duration="6705000" />
     </task>
     <task id="LOCAL-00001" summary="added creating of indexes for elastic for PROCESSED payments during closing of batch">
       <created>1468855748892</created>
@@ -1586,7 +1596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1470122445947</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="implemented test for RestTester">
+      <created>1470122881504</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1470122881504</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1622,7 +1639,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203373000" />
+    <option name="totallyTimeSpent" value="204446000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1984,7 +2001,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ecom-core/src/main/java/com/lpb/ecom/elasticsearch/domain/PaymentIterator.java" />
     <entry file="file://$PROJECT_DIR$/ecom-core/src/main/java/com/lpb/ecom/elasticsearch/domain/MappingCreator.java" />
     <entry file="file://$PROJECT_DIR$/ecom-core/src/main/java/com/lpb/ecom/elasticsearch/service/client/AdminClientService.java" />
     <entry file="file://$PROJECT_DIR$/ecom-core/src/main/java/com/lpb/ecom/elasticsearch/service/client/AdminClientServiceStub.java" />
@@ -2201,6 +2217,14 @@
             <element signature="e#4439#4440#0" expanded="true" />
             <element signature="e#4493#4494#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/forTransaction/TransactionBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -12,9 +12,17 @@ import java.util.concurrent.Callable;
 
 @Stateless(name = "TransactionBean")
 @TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
-public  class TransactionBean implements Caller {
+public class TransactionBean implements Caller {
 
     public <V> V call(Callable<V> callable) throws Exception {
         return callable.call();
     }
 }
+/* Example of usage
+ transactionalCaller.call(new Callable() {
+public Object call() throws Exception {
+        preparePaymentData();
+        return null;
+        }
+        });
+*/
