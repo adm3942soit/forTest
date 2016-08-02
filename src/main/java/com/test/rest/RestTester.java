@@ -40,8 +40,11 @@ public class RestTester {
     public static Context ctx;
 
     private static EJBContainer container;
-    private static Map<String, NewCookie> cookieMap;
+    public static Map<String, NewCookie> cookieMap;
 
+    public static Map<String, NewCookie> getCookieMap() {
+        return cookieMap;
+    }
 
     public static Context getContext() {
         return ctx;
@@ -123,7 +126,7 @@ public class RestTester {
 
     }
 
-    private static URI getBaseURI(String url) {
+    public static URI getBaseURI(String url) {
         return UriBuilder.fromUri(url).build();
     }
 
