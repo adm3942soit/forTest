@@ -2,6 +2,7 @@ package com.test.rest;
 
 import com.credentials.Credentials;
 import org.glassfish.jersey.jackson.JacksonFeature;
+
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.Context;
 import javax.ws.rs.client.*;
@@ -87,12 +88,12 @@ public class RestTester {
 
         properties.put(EJBContainer.APP_NAME, applicationName);
 
-        if(warAbsolutePath!=null && !warAbsolutePath.isEmpty()) {
+        if (warAbsolutePath != null && !warAbsolutePath.isEmpty()) {
             final File file = new File(warAbsolutePath);
             if (!file.mkdirs() && !file.exists()) {
                 throw new RuntimeException("can't create " + file.getAbsolutePath());
             }
-           // properties.put(DeploymentsResolver.CLASSPATH_INCLUDE, pathToDomain + File.separator +warAbsolutePath);
+            // properties.put(DeploymentsResolver.CLASSPATH_INCLUDE, pathToDomain + File.separator +warAbsolutePath);
             properties.put(EJBContainer.MODULES, warAbsolutePath);//war.getAbsolutePath()
         }
         String fileName = "";
@@ -189,12 +190,20 @@ public class RestTester {
                 if (parameterToResource == null)
                     target = target.path(pathInResource);
                 else
-                    target = target.path("{" + pathInResource + "}").resolveTemplate(pathInResource, parameterToResource);
+                    target = target.path("{" + pathInResource + "}")
+                            .resolveTemplate(pathInResource, parameterToResource);
             }
             System.out.println("Received cookie: " + cookieMap);
-            Invocation.Builder invocationBuilder = target
-                    .request(MediaType.APPLICATION_JSON)
-                    .cookie("JSESSIONID", cookieMap.get("JSESSIONID").getValue());
+            Invocation.Builder invocationBuilder;
+            if (cookieMap.isEmpty()) {
+                invocationBuilder = target
+                        .request(MediaType.APPLICATION_JSON);
+
+            } else {
+                invocationBuilder = target
+                        .request(MediaType.APPLICATION_JSON)
+                        .cookie("JSESSIONID", cookieMap.get("JSESSIONID").getValue());
+            }
             Response clientResponse = null;
             switch (nameRequest) {
                 case "GET":
