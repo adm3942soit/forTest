@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
 
 import javax.naming.Context;
 import javax.ws.rs.client.*;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.UriBuilder;
 import java.io.File;
 import java.net.URI;
@@ -28,6 +29,7 @@ public class RestResourcesTester {
     private static String pathInResource;
     private static String parameterToResource;
     private static Client client;
+
     public static String getNameXmlFile() {
         return nameXmlFile;
     }
@@ -115,8 +117,8 @@ public class RestResourcesTester {
     private static Entity<?> entity = null;
 
     public static void setArguments(String applicationName, String urlForResource, String urlForLogin, String nameConfig, String nameRequest, Entity<?> entity,
-                               String pathInResource,
-                               String parameterToResource
+                                    String pathInResource,
+                                    String parameterToResource
 
     ) {
         setUrlForResource(urlForResource);
@@ -125,9 +127,11 @@ public class RestResourcesTester {
         setEntity(entity);
         setPathInResource(pathInResource);
         setParameterToResource(parameterToResource);
-        RestTester.setApplicationName(applicationName);;
+        RestTester.setApplicationName(applicationName);
+        ;
         RestTester.setNameConfig(nameConfig);
     }
+
     public static void setArguments(String urlForResource, String urlForLogin, String nameRequest, Entity<?> entity,
                                     String pathInResource,
                                     String parameterToResource
@@ -141,13 +145,14 @@ public class RestResourcesTester {
         setParameterToResource(parameterToResource);
     }
 
-    private static String urlPaymentResource="http://localhost:8080/rest/payment";
-    private static String urlSessionResource="http://localhost:8080/rest/session";
+    private static String urlPaymentResource = "http://localhost:8080/rest/payment";
+    private static String urlSessionResource = "http://localhost:8080/rest/session";
 
-    public static void setResources(String applicationName,String nameConfig
+    public static void setResources(String applicationName, String nameConfig
 
     ) {
-        RestTester.setApplicationName(applicationName);;
+        RestTester.setApplicationName(applicationName);
+        ;
         RestTester.setNameConfig(nameConfig);
     }
 
@@ -158,7 +163,7 @@ public class RestResourcesTester {
 
     @BeforeClass
     public static void prepareData() {
-        setResources("ecom-rest","ecom-dev.properties");
+        setResources("ecom-rest", "ecom-dev.properties");
         RestTester.setWarAbsolutePath(null);
         RestTester.startContainer();
 /*
@@ -186,11 +191,11 @@ public class RestResourcesTester {
         try {
             //setArguments(urlPaymentResource, urlSessionResource,"get",null,"id","21213832");
             //RestTester.setSessionUserNamePassword(urlForLogin, Credentials.getUserName(Credentials.MERCHANT), Credentials.MERCHANT);
-            String userName=Credentials.getUserName(Credentials.MERCHANT);
-            String password=Credentials.getUserPassword(Credentials.MERCHANT);
-            RestTester.checkResource(urlSessionResource,"post",null,null,
-                    "{\"name\":\"" +userName  + "\" ,\"password\":\"" + password + "\"}"
-                    , Entity.json("{\"name\":\"\" +userName  + \"\\\" ,\\\"password\\\":\\\"\" + password + \"\"}")
+            String userName = Credentials.getUserName(Credentials.MERCHANT);
+            String password = Credentials.getUserPassword(Credentials.MERCHANT);
+            RestTester.checkResource(urlSessionResource, "post", null, null,
+                    "{\"name\":\"" + userName + "\" ,\"password\":\"" + password + "\"}"
+                    , Entity.entity("{\"name\":\"" + userName + "\" ,\"password\":\"" + password + "\"}", MediaType.APPLICATION_JSON_TYPE)
                     , String.class);
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -203,11 +208,11 @@ public class RestResourcesTester {
     public void checkResource() {
         if (!RestTester.GLASSFISH_ON) return;
         try {
-            setArguments(urlPaymentResource, urlSessionResource,"get",null,"id","21213832");
-            RestTester.checkResource(urlForResource,"get","id","21213832",null, null, String.class);
+            setArguments(urlPaymentResource, urlSessionResource, "get", null, "id", "21213832");
+            RestTester.checkResource(urlForResource, "get", "id", "21213832", null, null, String.class);
         } catch (Exception e) {
             System.out.println("\n\tGot exception: " + e.getMessage());
-            if(e.getMessage()==null){
+            if (e.getMessage() == null) {
                 System.out.println("Module ecom-rest undeployed");
             }
 
@@ -220,7 +225,7 @@ public class RestResourcesTester {
         }
 
 
-        return ;
+        return;
     }
 
     //@Test

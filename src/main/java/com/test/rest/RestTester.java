@@ -179,6 +179,7 @@ public class RestTester {
         }
 
     }
+
     public static boolean checkResource(
             String urlForResource,
             String nameRequest,
@@ -199,7 +200,7 @@ public class RestTester {
                             .resolveTemplate(pathInResource, parameterToResource);
             }
             Invocation.Builder invocationBuilder;
-            if (cookieMap==null || cookieMap.isEmpty()) {
+            if (cookieMap == null || cookieMap.isEmpty()) {
                 invocationBuilder = target.register(clazz)
                         .request(MediaType.APPLICATION_JSON);
 
@@ -220,9 +221,14 @@ public class RestTester {
                     break;
                 case "POST":
                 case "post":
-                    clientResponse = invocationBuilder
-                            .post((jsonStrEntity!=null && !jsonStrEntity.isEmpty())?
-                                    Entity.json(jsonStrEntity):Entity.entity(entity, MediaType.APPLICATION_JSON_TYPE), Response.class);
+                    if (jsonStrEntity != null && !jsonStrEntity.isEmpty()) {
+                        clientResponse = invocationBuilder.post(Entity.json(jsonStrEntity), Response.class);
+                    } else {
+                        clientResponse = invocationBuilder
+                                .post(Entity.entity(entity.getEntity()
+                                        , MediaType.APPLICATION_JSON_TYPE)
+                                        , Response.class);
+                    }
                     cookieMap = clientResponse.getCookies();
                     break;
                 default:
