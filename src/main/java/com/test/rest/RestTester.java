@@ -185,6 +185,7 @@ public class RestTester {
             String pathInResource,
             String parameterToResource,
             String jsonStrEntity,
+            Entity entity,
             Class clazz
     ) {
         if (!GLASSFISH_ON) return false;
@@ -219,7 +220,9 @@ public class RestTester {
                     break;
                 case "POST":
                 case "post":
-                    clientResponse = invocationBuilder.post(Entity.json(jsonStrEntity), Response.class);
+                    clientResponse = invocationBuilder
+                            .post((jsonStrEntity!=null && !jsonStrEntity.isEmpty())?
+                                    Entity.json(jsonStrEntity):Entity.entity(entity, MediaType.APPLICATION_JSON_TYPE), Response.class);
                     cookieMap = clientResponse.getCookies();
                     break;
                 default:
@@ -230,7 +233,8 @@ public class RestTester {
             String jsonResponse = clientResponse.readEntity(String.class);
             System.out.println("Received response from persister: " + jsonResponse);
         } catch (Exception e) {
-            System.out.println("\n\tGot exception: " + e.getMessage());
+            System.out.println("RestTester: " + e.getMessage());
+            e.printStackTrace();
             System.out.println(e.getCause());
             if (e.getMessage() != null && e.getMessage().contains("Connection refused")) {
                 System.out.println("Glassfish server not started");

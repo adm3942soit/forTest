@@ -189,7 +189,9 @@ public class RestResourcesTester {
             String userName=Credentials.getUserName(Credentials.MERCHANT);
             String password=Credentials.getUserPassword(Credentials.MERCHANT);
             RestTester.checkResource(urlSessionResource,"post",null,null,
-                    "{\"name\":\"" +userName  + "\" ,\"password\":\"" + password + "\"}", String.class);
+                    "{\"name\":\"" +userName  + "\" ,\"password\":\"" + password + "\"}"
+                    , Entity.json("{\"name\":\"\" +userName  + \"\\\" ,\\\"password\\\":\\\"\" + password + \"\"}")
+                    , String.class);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -202,7 +204,7 @@ public class RestResourcesTester {
         if (!RestTester.GLASSFISH_ON) return;
         try {
             setArguments(urlPaymentResource, urlSessionResource,"get",null,"id","21213832");
-            RestTester.checkResource(urlForResource,"get","id","21213832",null, String.class);
+            RestTester.checkResource(urlForResource,"get","id","21213832",null, null, String.class);
         } catch (Exception e) {
             System.out.println("\n\tGot exception: " + e.getMessage());
             if(e.getMessage()==null){

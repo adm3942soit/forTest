@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caca9873-4e86-4c68-ad06-570f2905ff04" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/forTest-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/build/libs/forTest-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java" afterPath="$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/rest/RestResourcesTester.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/rest/RestResourcesTester.java" />
@@ -119,8 +118,8 @@
       <file leaf-file-name="RestResourcesTester.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/test/rest/RestResourcesTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="204" column="92" selection-start-line="204" selection-start-column="92" selection-end-line="204" selection-end-column="92" />
+            <state relative-caret-position="210">
+              <caret line="193" column="21" selection-start-line="193" selection-start-column="21" selection-end-line="193" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -149,16 +148,16 @@
       <file leaf-file-name="RestTester.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="208" column="13" selection-start-line="208" selection-start-column="13" selection-end-line="208" selection-end-column="13" />
+            <state relative-caret-position="300">
+              <caret line="187" column="26" selection-start-line="187" selection-start-column="26" selection-end-line="187" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1428#1429#0" expanded="true" />
                 <element signature="e#1460#1461#0" expanded="true" />
                 <element signature="e#4563#4564#0" expanded="true" />
                 <element signature="e#4617#4618#0" expanded="true" />
-                <element signature="e#9063#9064#0" expanded="true" />
-                <element signature="e#9092#9093#0" expanded="true" />
+                <element signature="e#9287#9288#0" expanded="true" />
+                <element signature="e#9316#9317#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1443,7 +1442,7 @@
       <workItem from="1469693418164" duration="6098000" />
       <workItem from="1469799218924" duration="869000" />
       <workItem from="1469945979582" duration="12847000" />
-      <workItem from="1470058481644" duration="16979000" />
+      <workItem from="1470058481644" duration="18433000" />
     </task>
     <task id="LOCAL-00001" summary="added creating of indexes for elastic for PROCESSED payments during closing of batch">
       <created>1468855748892</created>
@@ -1585,13 +1584,17 @@
       <option name="project" value="LOCAL" />
       <updated>1470134759217</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="implemented test for RestTester">
+      <created>1470147168994</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1470147168994</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RestResourcesTester - 2016.08.02 at 13h 27m 42s.xml">
-      <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="RestResourcesTester - 2016.08.02 at 13h 30m 56s.xml">
       <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -1619,9 +1622,12 @@
     <history-entry file="RestResourcesTester - 2016.08.02 at 17h 10m 02s.xml">
       <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="RestResourcesTester - 2016.08.02 at 17h 20m 37s.xml">
+      <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214720000" />
+    <option name="totallyTimeSpent" value="216174000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1645,7 +1651,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.4939577" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44901064" sideWeight="0.46978852" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.304414" sideWeight="0.46978852" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49697885" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23413897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1949,7 +1955,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/test/rest/RestResourcesTester.java</url>
-          <line>203</line>
+          <line>205</line>
           <properties />
           <option name="timeStamp" value="160" />
         </line-breakpoint>
@@ -1961,7 +1967,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/test/rest/RestResourcesTester.java</url>
-          <line>201</line>
+          <line>203</line>
           <properties />
           <option name="timeStamp" value="164" />
         </line-breakpoint>
@@ -2162,24 +2168,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="208" column="13" selection-start-line="208" selection-start-column="13" selection-end-line="208" selection-end-column="13" />
+        <state relative-caret-position="300">
+          <caret line="187" column="26" selection-start-line="187" selection-start-column="26" selection-end-line="187" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1428#1429#0" expanded="true" />
             <element signature="e#1460#1461#0" expanded="true" />
             <element signature="e#4563#4564#0" expanded="true" />
             <element signature="e#4617#4618#0" expanded="true" />
-            <element signature="e#9063#9064#0" expanded="true" />
-            <element signature="e#9092#9093#0" expanded="true" />
+            <element signature="e#9287#9288#0" expanded="true" />
+            <element signature="e#9316#9317#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/test/rest/RestResourcesTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="204" column="92" selection-start-line="204" selection-start-column="92" selection-end-line="204" selection-end-column="92" />
+        <state relative-caret-position="210">
+          <caret line="193" column="21" selection-start-line="193" selection-start-column="21" selection-end-line="193" selection-end-column="21" />
           <folding />
         </state>
       </provider>
