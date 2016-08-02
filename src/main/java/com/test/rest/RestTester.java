@@ -195,7 +195,7 @@ public class RestTester {
             }
             System.out.println("Received cookie: " + cookieMap);
             Invocation.Builder invocationBuilder;
-            if (cookieMap.isEmpty()) {
+            if (cookieMap==null || cookieMap.isEmpty()) {
                 invocationBuilder = target
                         .request(MediaType.APPLICATION_JSON);
 
