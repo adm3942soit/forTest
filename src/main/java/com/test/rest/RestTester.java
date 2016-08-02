@@ -30,7 +30,7 @@ public class RestTester {
         try {
             current = new File(".").getCanonicalPath();
             current = current.replaceAll("\\\\", "/");
-            resources = current + "/src/main/resources";
+            resources = current + "/src/test/resources";
         } catch (Exception ex) {
             ex.printStackTrace();
         }

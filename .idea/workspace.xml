@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caca9873-4e86-4c68-ad06-570f2905ff04" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/javax.persistence-2.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/javax.ws.rs-api-2.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jaxb-api-2.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jersey-media-json-jackson-2.19.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/credentials.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/data.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/glassfish-acc.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/forTest-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/build/libs/forTest-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java" afterPath="$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java" />
     </list>
     <ignored path="medoro.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -165,61 +164,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-592">
-              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            <state relative-caret-position="948">
+              <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestTester.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RestTester.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="123">
+              <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
               <folding>
-                <element signature="e#1288#1289#0" expanded="false" />
-                <element signature="e#1314#1315#0" expanded="false" />
-                <element signature="e#4346#4347#0" expanded="false" />
-                <element signature="e#4400#4401#0" expanded="false" />
-                <element signature="e#8504#8505#0" expanded="false" />
-                <element signature="e#8539#8540#0" expanded="false" />
-                <element signature="e#8579#8580#0" expanded="false" />
-                <element signature="e#8608#8609#0" expanded="false" />
-                <element signature="e#8649#8650#0" expanded="false" />
-                <element signature="e#8679#8680#0" expanded="false" />
-                <element signature="e#8722#8723#0" expanded="false" />
-                <element signature="e#8754#8755#0" expanded="false" />
-                <element signature="e#8803#8804#0" expanded="false" />
-                <element signature="e#8841#8842#0" expanded="false" />
-                <element signature="e#8885#8886#0" expanded="false" />
-                <element signature="e#8918#8919#0" expanded="false" />
-                <element signature="e#8980#8981#0" expanded="false" />
-                <element signature="e#9022#9023#0" expanded="false" />
-                <element signature="e#9073#9074#0" expanded="false" />
-                <element signature="e#9115#9116#0" expanded="false" />
-                <element signature="e#9168#9169#0" expanded="false" />
-                <element signature="e#9212#9213#0" expanded="false" />
-                <element signature="e#9269#9270#0" expanded="false" />
-                <element signature="e#9317#9318#0" expanded="false" />
-                <element signature="e#9386#9387#0" expanded="false" />
-                <element signature="e#9446#9447#0" expanded="false" />
-                <element signature="e#9505#9506#0" expanded="false" />
-                <element signature="e#9555#9556#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1303#1304#0" expanded="true" />
+                <element signature="e#1335#1336#0" expanded="true" />
+                <element signature="e#4434#4435#0" expanded="true" />
+                <element signature="e#4488#4489#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="glassfish-acc.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/glassfish-acc.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -577,8 +543,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/resources/glassfish-acc.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/test/rest/RestResourcesTester.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java" />
       </list>
     </option>
   </component>
@@ -668,6 +634,10 @@
               <option name="myItemId" value="test" />
               <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -692,28 +662,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1520,7 +1468,7 @@
       <workItem from="1469693418164" duration="6098000" />
       <workItem from="1469799218924" duration="869000" />
       <workItem from="1469945979582" duration="12847000" />
-      <workItem from="1470058481644" duration="368000" />
+      <workItem from="1470058481644" duration="3796000" />
     </task>
     <task id="LOCAL-00001" summary="added creating of indexes for elastic for PROCESSED payments during closing of batch">
       <created>1468855748892</created>
@@ -1613,13 +1561,24 @@
       <option name="project" value="LOCAL" />
       <updated>1470047586707</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="implemented test for RestTester">
+      <created>1470058858595</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1470058858595</updated>
+    </task>
+    <task id="LOCAL-00015" summary="implemented test for RestTester">
+      <created>1470118561096</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1470118561096</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RestResourcesTester - 2016.08.01 at 10h 56m 03s.xml">
-      <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="RestResourcesTester - 2016.08.01 at 11h 03m 26s.xml">
       <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -1647,9 +1606,12 @@
     <history-entry file="RestResourcesTester - 2016.08.01 at 16h 40m 22s.xml">
       <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="RestResourcesTester - 2016.08.02 at 09h 28m 07s.xml">
+      <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198109000" />
+    <option name="totallyTimeSpent" value="201537000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1673,7 +1635,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.4939577" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.369863" sideWeight="0.46978852" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40791476" sideWeight="0.46978852" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.49697885" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23036253" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -2209,48 +2171,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#1288#1289#0" expanded="false" />
-            <element signature="e#1314#1315#0" expanded="false" />
-            <element signature="e#4346#4347#0" expanded="false" />
-            <element signature="e#4400#4401#0" expanded="false" />
-            <element signature="e#8504#8505#0" expanded="false" />
-            <element signature="e#8539#8540#0" expanded="false" />
-            <element signature="e#8579#8580#0" expanded="false" />
-            <element signature="e#8608#8609#0" expanded="false" />
-            <element signature="e#8649#8650#0" expanded="false" />
-            <element signature="e#8679#8680#0" expanded="false" />
-            <element signature="e#8722#8723#0" expanded="false" />
-            <element signature="e#8754#8755#0" expanded="false" />
-            <element signature="e#8803#8804#0" expanded="false" />
-            <element signature="e#8841#8842#0" expanded="false" />
-            <element signature="e#8885#8886#0" expanded="false" />
-            <element signature="e#8918#8919#0" expanded="false" />
-            <element signature="e#8980#8981#0" expanded="false" />
-            <element signature="e#9022#9023#0" expanded="false" />
-            <element signature="e#9073#9074#0" expanded="false" />
-            <element signature="e#9115#9116#0" expanded="false" />
-            <element signature="e#9168#9169#0" expanded="false" />
-            <element signature="e#9212#9213#0" expanded="false" />
-            <element signature="e#9269#9270#0" expanded="false" />
-            <element signature="e#9317#9318#0" expanded="false" />
-            <element signature="e#9386#9387#0" expanded="false" />
-            <element signature="e#9446#9447#0" expanded="false" />
-            <element signature="e#9505#9506#0" expanded="false" />
-            <element signature="e#9555#9556#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="948">
+          <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-592">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="123">
+          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1303#1304#0" expanded="true" />
+            <element signature="e#1335#1336#0" expanded="true" />
+            <element signature="e#4434#4435#0" expanded="true" />
+            <element signature="e#4488#4489#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
