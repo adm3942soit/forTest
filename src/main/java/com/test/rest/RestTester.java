@@ -4,6 +4,7 @@ import com.credentials.Credentials;
 import com.test.forTransaction.Caller;
 import com.test.json.JacksonFeature;
 import com.test.rest.utils.JndiView;
+import com.test.xml.ExtractorFromXMLToObject;
 //import org.glassfish.jersey.jackson.JacksonFeature;
 
 import javax.ejb.embeddable.EJBContainer;
@@ -49,6 +50,7 @@ public class RestTester {
 
     private static EJBContainer container;
     public static Caller transactionalCaller;
+    public static ExtractorFromXMLToObject extractorFromXMLToObject;
     public static Map<String, NewCookie> cookieMap;
 
     public static Map<String, NewCookie> getCookieMap() {
@@ -136,6 +138,7 @@ public class RestTester {
 
             transactionalCaller = (Caller)
                     ctx.lookup("java:global/"+applicationName+"/main/TransactionBean");
+            extractorFromXMLToObject= (ExtractorFromXMLToObject)ctx.lookup("java:global/"+applicationName+"/main/ExtractorFromXMLToObject");
 
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -266,6 +269,10 @@ public class RestTester {
         }
 
         return true;
+    }
+
+    public static ExtractorFromXMLToObject getExtractorFromXMLToObject() {
+        return extractorFromXMLToObject;
     }
 
     public static Boolean getGlassfishOn() {
