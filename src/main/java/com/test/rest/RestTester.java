@@ -2,9 +2,14 @@ package com.test.rest;
 
 import com.credentials.Credentials;
 import com.test.forTransaction.Caller;
+import com.test.forTransaction.TransactionBean;
 import com.test.json.JacksonFeature;
+import com.test.rest.utils.JarClassLoader;
 import com.test.rest.utils.JndiView;
 import com.test.xml.ExtractorFromXMLToObject;
+import org.apache.commons.lang.reflect.FieldUtils;
+import org.glassfish.ejb.embedded.DeploymentElement;
+import org.glassfish.ejb.embedded.EJBContainerImpl;
 //import org.glassfish.jersey.jackson.JacksonFeature;
 
 import javax.ejb.embeddable.EJBContainer;
@@ -15,14 +20,15 @@ import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
 import java.io.File;
+import java.lang.reflect.Field;
 import java.net.URI;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import javax.naming.Binding;
 import javax.naming.InitialContext;
 import javax.naming.NameClassPair;
 import javax.naming.NamingEnumeration;
 import javax.naming.NamingException;
+
 /**
  * Created by oksdud on 27.07.2016.
  */
@@ -124,29 +130,22 @@ public class RestTester {
 
         container = EJBContainer.createEJBContainer(properties);//
         ctx = container.getContext();
+    }
+
+    public static Caller getTransactionalCaller(String nameJar) {
         try {
-            String JAVA_GLOBAL="java:global";
+            String JAVA_GLOBAL = "java:global";
             System.out.println("!!!!!!!!!!!!!!!starting describing envoronment");
-            JndiView.browse(JAVA_GLOBAL);
-        }catch (Exception ex){
-            ex.printStackTrace();
-        }
-        System.out.println("!!!!!!!!!!!!!!!finishing describing envoronment");
-
-
-        try {
-
-            transactionalCaller = (Caller)
-                    ctx.lookup("java:global/"+applicationName+"/main/TransactionBean");
-            extractorFromXMLToObject= (ExtractorFromXMLToObject)ctx.lookup("java:global/"+applicationName+"/main/ExtractorFromXMLToObject");
-
+//            JndiView.browse(JAVA_GLOBAL);
+            Object obj = FieldUtils.readField(container, "res_app", true);
+            File dir = (File) FieldUtils.readField(obj, "app", true);
+            File libDir = new File(dir.getAbsolutePath() + File.separator + "lib");
+            File testLibDir = new File(libDir.getAbsolutePath() + File.separator + nameJar);
+            transactionalCaller=(TransactionBean)JarClassLoader.getObjectClass(testLibDir.getAbsolutePath(), TransactionBean.class);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
 
-    }
-
-    public static Caller getTransactionalCaller() {
         return transactionalCaller;
     }
 
