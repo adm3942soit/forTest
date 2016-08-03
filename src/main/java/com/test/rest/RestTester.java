@@ -3,6 +3,7 @@ package com.test.rest;
 import com.credentials.Credentials;
 import com.test.forTransaction.Caller;
 import com.test.json.JacksonFeature;
+import com.test.rest.utils.JndiView;
 //import org.glassfish.jersey.jackson.JacksonFeature;
 
 import javax.ejb.embeddable.EJBContainer;
@@ -16,7 +17,11 @@ import java.io.File;
 import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
-
+import javax.naming.Binding;
+import javax.naming.InitialContext;
+import javax.naming.NameClassPair;
+import javax.naming.NamingEnumeration;
+import javax.naming.NamingException;
 /**
  * Created by oksdud on 27.07.2016.
  */
@@ -117,19 +122,29 @@ public class RestTester {
 
         container = EJBContainer.createEJBContainer(properties);//
         ctx = container.getContext();
-/*
+        try {
+            String JAVA_GLOBAL="java:global";
+            System.out.println("!!!!!!!!!!!!!!!starting describing envoronment");
+            JndiView.browse(JAVA_GLOBAL);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        System.out.println("!!!!!!!!!!!!!!!finishing describing envoronment");
+
 
         try {
 
             transactionalCaller = (Caller)
-                    ctx.lookup("java:global/forTest/main/TransactionBean");
+                    ctx.lookup("java:global/"+applicationName+"/main/TransactionBean");
 
         } catch (Exception ex) {
             ex.printStackTrace();
         }
 
-*/
+    }
 
+    public static Caller getTransactionalCaller() {
+        return transactionalCaller;
     }
 
     public static URI getBaseURI(String url) {

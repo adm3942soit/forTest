@@ -20,7 +20,7 @@ dependencies {
     compile group: 'junit', name: 'junit', version: '4.11'
     compile libs.credentials
     compile libs.embedGlassFishAll
-
+    compile group: 'org.springframework', name: 'spring-context', version: '3.0.2.RELEASE'
 }
 task fatJar(type: Jar) {
 
