@@ -1,4 +1,4 @@
-package com.test.rest.utils;
+package com.test.rest.utils.jar;
 
 /**
  * Created by oksdud on 03.08.2016.

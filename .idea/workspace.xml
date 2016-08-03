@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caca9873-4e86-4c68-ad06-570f2905ff04" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/test/rest/utils/JarClassLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/test/rest/utils/JarResources.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/test/rest/utils/MultiClassLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/test/rest/utils/FromDirClassLoader.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/test/rest/utils/JarClassLoader.java" afterPath="$PROJECT_DIR$/src/main/java/com/test/rest/utils/jar/JarClassLoader.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/test/rest/utils/JarResources.java" afterPath="$PROJECT_DIR$/src/main/java/com/test/rest/utils/jar/JarResources.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/forTest-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/build/libs/forTest-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java" afterPath="$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java" />
@@ -121,8 +121,8 @@
       <file leaf-file-name="RestResourcesTester.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/test/rest/RestResourcesTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="191" column="41" selection-start-line="191" selection-start-column="41" selection-end-line="191" selection-end-column="41" />
+            <state relative-caret-position="112">
+              <caret line="228" column="0" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -141,36 +141,48 @@
       <file leaf-file-name="RestTester.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+            <state relative-caret-position="855">
+              <caret line="295" column="33" selection-start-line="295" selection-start-column="33" selection-end-line="295" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#10658#10659#0" expanded="true" />
-                <element signature="e#10705#10706#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="JarClassLoader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/utils/JarClassLoader.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/utils/jar/JarClassLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="140">
+              <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JarResources.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/utils/JarResources.java">
+      <file leaf-file-name="FromDirClassLoader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/utils/FromDirClassLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+            <state relative-caret-position="60">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1015#1016#0" expanded="true" />
-                <element signature="e#1069#1070#0" expanded="true" />
+                <element signature="e#274#275#0" expanded="true" />
+                <element signature="e#297#298#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JarResources.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/utils/jar/JarResources.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2780">
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1019#1020#0" expanded="true" />
+                <element signature="e#1073#1074#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -179,8 +191,8 @@
       <file leaf-file-name="MultiClassLoader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/utils/MultiClassLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="67" column="14" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
+            <state relative-caret-position="280">
+              <caret line="102" column="21" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
               <folding>
                 <element signature="e#3287#3288#0" expanded="true" />
                 <element signature="e#3341#3342#0" expanded="true" />
@@ -220,20 +232,6 @@
               <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReadOnlyIterator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/utils/ReadOnlyIterator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-              <folding>
-                <element signature="n#!!doc" expanded="false" />
-                <element signature="e#452#453#0" expanded="false" />
-                <element signature="e#549#550#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -595,14 +593,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/test/rest/utils/JndiEntry.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/rest/utils/ReadOnlyIterator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/rest/utils/Reflection.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/test/rest/RestResourcesTester.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/rest/utils/JndiView.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/xml/ExtractorFromXMLToObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/rest/utils/ClassFromJar.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/test/rest/utils/MultiClassLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/rest/utils/JarResources.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/rest/utils/JarClassLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/rest/utils/ClassLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/rest/utils/jar/JarClassLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/rest/utils/jar/JarResources.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/rest/utils/MultiClassLoader.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/rest/RestResourcesTester.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/test/rest/utils/FromDirClassLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java" />
       </list>
     </option>
@@ -811,6 +813,44 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1554,7 +1594,7 @@
       <workItem from="1469799218924" duration="869000" />
       <workItem from="1469945979582" duration="12847000" />
       <workItem from="1470058481644" duration="25848000" />
-      <workItem from="1470211725451" duration="7938000" />
+      <workItem from="1470211725451" duration="16346000" />
     </task>
     <task id="LOCAL-00001" summary="added creating of indexes for elastic for PROCESSED payments during closing of batch">
       <created>1468855748892</created>
@@ -1731,16 +1771,17 @@
       <option name="project" value="LOCAL" />
       <updated>1470212876985</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="implemented test for RestTester">
+      <created>1470221472972</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1470221472972</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RestResourcesTester - 2016.08.03 at 13h 06m 16s.xml">
-      <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="RestResourcesTester - 2016.08.03 at 13h 07m 33s.xml">
-      <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="RestResourcesTester - 2016.08.03 at 13h 11m 00s.xml">
       <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -1765,9 +1806,15 @@
     <history-entry file="RestResourcesTester - 2016.08.03 at 13h 47m 06s.xml">
       <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="RestResourcesTester - 2016.08.03 at 14h 20m 50s.xml">
+      <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="RestResourcesTester - 2016.08.03 at 14h 21m 22s.xml">
+      <configuration name="RestResourcesTester" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231527000" />
+    <option name="totallyTimeSpent" value="239935000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1792,9 +1839,9 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.4939577" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41095892" sideWeight="0.46978852" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.49697885" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35312024" sideWeight="0.46978852" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.95129377" sideWeight="0.49697885" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25226587" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2120,19 +2167,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java</url>
-          <line>243</line>
+          <line>245</line>
           <properties />
           <option name="timeStamp" value="168" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java</url>
-          <line>258</line>
+          <line>260</line>
           <properties />
           <option name="timeStamp" value="169" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java</url>
-          <line>248</line>
+          <line>250</line>
           <properties />
           <option name="timeStamp" value="170" />
         </line-breakpoint>
@@ -2143,25 +2190,25 @@
           <option name="timeStamp" value="172" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/test/rest/utils/JarClassLoader.java</url>
-          <line>25</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/test/rest/utils/jar/JarClassLoader.java</url>
+          <line>27</line>
           <properties />
           <option name="timeStamp" value="184" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/test/rest/utils/JarClassLoader.java</url>
-          <line>10</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/test/rest/utils/jar/JarClassLoader.java</url>
+          <line>12</line>
           <properties />
           <option name="timeStamp" value="185" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java</url>
-          <line>143</line>
+          <line>144</line>
           <properties />
-          <option name="timeStamp" value="186" />
+          <option name="timeStamp" value="187" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="187" />
+      <option name="time" value="188" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="GlassfishConfiguration">
@@ -2181,7 +2228,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ecom-core/src/main/java/com/lpb/ecom/service/ProcessedPaymentService.java" />
     <entry file="file://$PROJECT_DIR$/ecom-core/src/main/java/com/lpb/ecom/service/FinancialBatchService.java" />
     <entry file="file://$PROJECT_DIR$/ecom-control/src/main/java/com/lpb/ecom/system/resource/FinancialBatchResource.java" />
     <entry file="file://$PROJECT_DIR$/ecom-core/src/main/java/com/lpb/ecom/interceptor/StateCheckInterceptor.java" />
@@ -2418,8 +2464,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/utils/MultiClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="67" column="14" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
+        <state relative-caret-position="280">
+          <caret line="102" column="21" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
           <folding>
             <element signature="e#3287#3288#0" expanded="true" />
             <element signature="e#3341#3342#0" expanded="true" />
@@ -2431,42 +2477,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/utils/JarClassLoader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/utils/jar/JarResources.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="-2780">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/utils/jar/JarClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="48" column="11" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/utils/JarResources.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/utils/FromDirClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
-            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#274#275#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/test/rest/RestResourcesTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="191" column="41" selection-start-line="191" selection-start-column="41" selection-end-line="191" selection-end-column="41" />
+        <state relative-caret-position="112">
+          <caret line="228" column="0" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/test/rest/RestTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+        <state relative-caret-position="855">
+          <caret line="295" column="33" selection-start-line="295" selection-start-column="33" selection-end-line="295" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10658#10659#0" expanded="true" />
-            <element signature="e#10705#10706#0" expanded="true" />
           </folding>
         </state>
       </provider>

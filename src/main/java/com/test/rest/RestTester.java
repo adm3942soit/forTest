@@ -4,12 +4,10 @@ import com.credentials.Credentials;
 import com.test.forTransaction.Caller;
 import com.test.forTransaction.TransactionBean;
 import com.test.json.JacksonFeature;
-import com.test.rest.utils.JarClassLoader;
-import com.test.rest.utils.JndiView;
+import com.test.rest.utils.FromDirClassLoader;
+import com.test.rest.utils.jar.JarClassLoader;
 import com.test.xml.ExtractorFromXMLToObject;
 import org.apache.commons.lang.reflect.FieldUtils;
-import org.glassfish.ejb.embedded.DeploymentElement;
-import org.glassfish.ejb.embedded.EJBContainerImpl;
 //import org.glassfish.jersey.jackson.JacksonFeature;
 
 import javax.ejb.embeddable.EJBContainer;
@@ -20,14 +18,8 @@ import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
 import java.io.File;
-import java.lang.reflect.Field;
 import java.net.URI;
 import java.util.*;
-import javax.naming.Binding;
-import javax.naming.InitialContext;
-import javax.naming.NameClassPair;
-import javax.naming.NamingEnumeration;
-import javax.naming.NamingException;
 
 /**
  * Created by oksdud on 27.07.2016.
@@ -134,14 +126,24 @@ public class RestTester {
 
     public static Caller getTransactionalCaller(String nameJar) {
         try {
+/*
+            view jndinames debug
             String JAVA_GLOBAL = "java:global";
-            System.out.println("!!!!!!!!!!!!!!!starting describing envoronment");
-//            JndiView.browse(JAVA_GLOBAL);
+            JndiView.browse(JAVA_GLOBAL);
+*/
             Object obj = FieldUtils.readField(container, "res_app", true);
             File dir = (File) FieldUtils.readField(obj, "app", true);
-            File libDir = new File(dir.getAbsolutePath() + File.separator + "lib");
-            File testLibDir = new File(libDir.getAbsolutePath() + File.separator + nameJar);
-            transactionalCaller=(TransactionBean)JarClassLoader.getObjectClass(testLibDir.getAbsolutePath(), TransactionBean.class);
+/*
+            needed transform name of jar as show
+            nameJar = nameJar.replaceAll('.', "_");//forTest-1_0-SNAPSHOT_jar
+*/
+            File testLibDir = new File(dir.getAbsolutePath() + File.separator + nameJar);
+/*
+            loader from jar (if your jar exist in war)
+           transactionalCaller = (TransactionBean) JarClassLoader.getObjectClass(testLibDir.getAbsolutePath(), TransactionBean.class);
+*/
+            transactionalCaller = (TransactionBean) new FromDirClassLoader().loadClassFromDir(testLibDir.getAbsolutePath(),
+                    "com.test.forTransaction.TransactionBean");
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -270,7 +272,30 @@ public class RestTester {
         return true;
     }
 
-    public static ExtractorFromXMLToObject getExtractorFromXMLToObject() {
+    public static ExtractorFromXMLToObject getExtractorFromXMLToObject(String nameJar) {
+        try {
+/*
+            view jndinames debug
+            String JAVA_GLOBAL = "java:global";
+            JndiView.browse(JAVA_GLOBAL);
+*/
+            Object obj = FieldUtils.readField(container, "res_app", true);
+            File dir = (File) FieldUtils.readField(obj, "app", true);
+/*
+            needed transform name of jar as show
+            nameJar = nameJar.replaceAll('.', "_");//forTest-1_0-SNAPSHOT_jar
+*/
+            File testLibDir = new File(dir.getAbsolutePath() + File.separator + nameJar);
+/*
+            loader from jar (if your jar exist in war)
+           transactionalCaller = (TransactionBean) JarClassLoader.getObjectClass(testLibDir.getAbsolutePath(), TransactionBean.class);
+*/
+            extractorFromXMLToObject = (ExtractorFromXMLToObject) new FromDirClassLoader().loadClassFromDir(testLibDir.getAbsolutePath(),
+                    "com.test.xml.ExtractorFromXMLToObject");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
         return extractorFromXMLToObject;
     }
 
