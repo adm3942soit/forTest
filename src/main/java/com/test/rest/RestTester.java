@@ -5,10 +5,9 @@ import com.test.forTransaction.Caller;
 import com.test.forTransaction.TransactionBean;
 import com.test.json.JacksonFeature;
 import com.test.rest.utils.FromDirClassLoader;
-import com.test.rest.utils.jar.JarClassLoader;
+import com.test.rest.utils.JndiView;
 import com.test.xml.ExtractorFromXMLToObject;
 import org.apache.commons.lang.reflect.FieldUtils;
-//import org.glassfish.jersey.jackson.JacksonFeature;
 
 import javax.ejb.embeddable.EJBContainer;
 import javax.naming.Context;
@@ -46,13 +45,21 @@ public class RestTester {
 
     public static Context ctx;
 
-    private static EJBContainer container;
+    public static EJBContainer container;
     public static Caller transactionalCaller;
     public static ExtractorFromXMLToObject extractorFromXMLToObject;
     public static Map<String, NewCookie> cookieMap;
 
     public static Map<String, NewCookie> getCookieMap() {
         return cookieMap;
+    }
+
+    public static Context getCtx() {
+        return ctx;
+    }
+
+    public static EJBContainer getContainer() {
+        return container;
     }
 
     public static Context getContext() {
@@ -101,7 +108,6 @@ public class RestTester {
             if (!file.mkdirs() && !file.exists()) {
                 throw new RuntimeException("can't create " + file.getAbsolutePath());
             }
-            // properties.put(DeploymentsResolver.CLASSPATH_INCLUDE, pathToDomain + File.separator +warAbsolutePath);
             properties.put(EJBContainer.MODULES, warAbsolutePath);//war.getAbsolutePath()
         }
         String fileName = "";
@@ -123,14 +129,19 @@ public class RestTester {
         container = EJBContainer.createEJBContainer(properties);//
         ctx = container.getContext();
     }
-
-    public static Caller getTransactionalCaller(String nameJar) {
-        try {
+    public static  void viewJndiNames(){
 /*
             view jndinames debug
-            String JAVA_GLOBAL = "java:global";
-            JndiView.browse(JAVA_GLOBAL);
 */
+            String JAVA_GLOBAL = "java:global";
+        try {
+            JndiView.browse(JAVA_GLOBAL);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+    }
+    public static Caller getTransactionalCaller(String nameJar) {
+        try {
             Object obj = FieldUtils.readField(container, "res_app", true);
             File dir = (File) FieldUtils.readField(obj, "app", true);
 /*

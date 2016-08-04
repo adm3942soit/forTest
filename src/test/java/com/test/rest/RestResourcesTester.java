@@ -232,6 +232,8 @@ public class RestResourcesTester {
         if (RestTester.client != null) {
             RestTester.client.close();
         }
+        if (RestTester.getContainer() != null)
+            RestTester.container.close();
 
     }
 
